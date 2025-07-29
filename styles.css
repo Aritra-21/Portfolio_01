@@ -1,0 +1,379 @@
+:root{
+    --text-color: #1a1c20;
+    --link-color: #4a76ee;
+    --background-color: #eeeff1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+a{
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* Navbar (Split into diffrent section */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 80px;
+}
+
+nav .left a{
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav .right a{
+    color: var(--text-color);
+    margin: 0 10px;
+}
+
+nav .right a:last-child {
+    color: var(--background-color);
+    background-color: var(--text-color);
+
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+/* Spacing between icon and text */
+
+nav .right a span {
+    margin-left: 5px;
+}
+
+/* Section 1: Hero */
+
+.heroSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    margin-bottom: 100px;
+    gap: 40px;
+}
+
+/* .heroSection .text {
+    flex: 2px;
+} */
+
+.heroSection .text h2 {
+    font-size: 40px;
+}
+
+.heroSection .text .links {
+    margin-top: 25px;
+}
+
+/* links */
+
+.heroSection .text .links a {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: .1s;
+}
+
+/* Hover effects on links Blue to black */
+.heroSection .text .links a:hover {
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+}
+
+
+
+.heroSection .profileImg {
+    flex: 2px;
+    display: flex;
+    justify-content: right;
+}
+
+.heroSection .profileImg img {
+    border-radius: 100%;
+    width: 250px ;
+}
+
+
+/* Section 2:Skills */
+
+.skillSection {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+/* h2: Center align */
+.skillSection h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+/* text */
+
+.skillSection .text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* clls */
+.skillSection .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* cell */
+.skillSection .cells .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+
+    width: 200px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+
+}
+
+/* logo height-width set */
+.skillSection .cells .cell img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+/* adjust font size of span */
+.skillSection .cells .cell span {
+    font-size: 18px;
+}
+
+/* Section 3 : Testimony */
+.testimonySection {
+    padding:  0 50px;
+    margin-bottom: 100px;
+}
+
+.testimonySection h2 {
+    /* heading font */
+    font-size: 35px;
+
+    /* gap between heading and picture */
+    margin-bottom: 30px;
+}
+
+.testimonySection .group {
+    display: flex;
+
+    /* text align center */
+    align-items: center;
+
+    /* gap between image and text */
+    gap: 50px;
+}
+
+.testimonySection .group .personDetails {
+    text-align: center;
+    flex: 2;
+}
+
+.testimonySection .group .text {
+    flex: 8;
+}
+
+/* image border circle */
+.testimonySection .group .personDetails img {
+
+    width: 250px;
+    aspect-ratio: 1 /1;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+
+}
+
+.testimonySection .group .personDetails p {
+    font-weight: 600;
+}
+
+.testimonySection .group .personDetails p:last-child {
+    font-weight: normal;
+}
+
+/* Section 4 : Contacts */
+
+.contactSection {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+/* heading */
+.contactSection h2 {
+    font-size: 35px;
+}
+
+/* group */
+
+.contactSection .group {
+    display: flex;
+    gap: 50px;
+}
+
+.contactSection .group .text {
+    flex: 3;
+    margin-top: 20px;
+}
+
+.contactSection .group form {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+
+}
+.contactSection .group form input,
+.contactSection .group form textarea {
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid var(--link-color);
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+    resize: none;
+}
+.contactSection .group form button {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffff;
+    background-color: var(--link-color);
+    border: none;
+    height: 50px;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.contactSection .group form button:hover {
+    filter: brightness(.9);
+}
+
+
+
+
+
+
+@media (max-width: 850px) {
+    /* Section 1: Hero */
+    .heroSection .text h2 {
+        font-size: 35px;
+    }
+}
+
+
+@media (max-width: 740px) {
+    /* Section 1: Hero */
+    .heroSection {
+        flex-direction: column-reverse;
+    }
+
+    .heroSection .profileImg img {
+        width: 300px;
+
+    }
+
+    /* Section 3 : Testimony */
+    .testimonySection h2 {
+        text-align: center;
+    }
+
+    .testimonySection .group {
+        flex-direction: column;
+    }
+
+    /* Section 4 : Contacts */
+    .contactSection .group {
+        flex-direction: column;
+    }
+
+}
+
+
+/* add style based on screen width */
+@media (max-width: 600px) {
+    /* Navbar */
+    nav {
+        padding: 0 20px;
+    }
+
+    nav .right a {
+        font-size: 22px;
+    }
+
+    nav right a:last-child {
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    } 
+
+    nav .right a span {
+        display: none;
+    }
+
+    /* Section1: Hero */
+
+    .heroSection {
+        padding: 0 20px;
+    }
+
+    .heroSection .text h2 {
+        font-size: 30px;
+    }
+
+    /* Section 2:Skills */
+    .skillSection {
+        padding: 0 20px;
+    }
+
+    /* adjust font size for each span */
+    .skillSection .cells .cell span {
+        font-size: 16px;
+    }
+
+     /* Section 3 : Testimony */
+     .testimonySection {
+        padding: 0 20px;
+     }
+
+
+    
+    /* Section 4 : Contacts */
+    .contactSection {
+        padding: 0 20px;
+    }
+
+
+}
+
